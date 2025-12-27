@@ -134,11 +134,12 @@ footer {
 li {
     position: relative;
     line-height: 2em;
+    list-style-type: none;
 }
 
-li::marker {
+/* li::marker {
     content: "";
-}
+} */
 
 li::after {
     content: "";
