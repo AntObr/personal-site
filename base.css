@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+US+Modern:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+:root {
+    --midnight-violet: #2C1320;
+    --vintage-grape: #5F4B66;
+    --muted-teal: #92BFB1;
+    --blue-slate: #56667A;
+
+    --background: #FBFBFE;
+    --text-colour: #2C1320;
+    
+    --primary-colour: #7BC0EB;
+    --primary-gradient: linear-gradient(90deg,rgba(123, 192, 235, 0.45) 0%, rgba(123, 192, 235, 0.6) 3%, rgba(123, 192, 235, 0.45) 6%, rgba(123, 192, 235, 0.35) 50%, rgba(123, 192, 235, 0.45) 94%, rgba(123, 192, 235, 0.6) 97%, rgba(123, 192, 235, 0.45) 100%);
+
+    --secondary-colour: #C0EB7B;
+    --secondary-gradient: linear-gradient(90deg, rgba(192, 235, 123, 0.45) 0%, rgba(192, 235, 123, 0.6) 3%, rgba(192, 235, 123, 0.45) 6%, rgba(192, 235, 123, 0.35) 50%, rgba(192, 235, 123, 0.45) 94%, rgba(192, 235, 123, 0.6) 97%, rgba(192, 235, 123, 0.45) 100%);
+
+    --accent-colour: #EB7BC0;
+    --accent-gradient: linear-gradient(90deg,rgba(235, 123, 192, 0.45) 0%, rgba(235, 123, 192, 0.6) 3%, rgba(235, 123, 192, 0.45) 6%, rgba(235, 123, 192, 0.35) 50%, rgba(235, 123, 192, 0.45) 94%, rgba(235, 123, 192, 0.6) 97%, rgba(235, 123, 192, 0.45) 100%);;
+
+    --code-background-gradient: linear-gradient(90deg, rgba(192, 235, 123, 0.45) 0%, rgba(192, 235, 123, 0.6) 3%, rgba(192, 235, 123, 0.45) 6%, rgba(192, 235, 123, 0.35) 50%, rgba(192, 235, 123, 0.45) 94%, rgba(192, 235, 123, 0.6) 97%, rgba(192, 235, 123, 0.45) 100%);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text-colour);
+    font-size: 1.2em;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+hr {
+    color: var(--accent-colour);
+    background-color: var(--accent-colour);
+    height: 2px;
+}
+
+header {
+    width: min(90%, 50em);
+    margin: 0 auto;
+}
+
+main {
+    width: min(90%, 50em);
+    margin: 0 auto;
+}
+/* 
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+
+#logo img {
+    width: 100px;
+    /* height: 200px; */
+    display: inline-block;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: min-content;
+}
+
+header nav {
+    text-align: right;
+}
+
+a {
+    color: var(--text-colour);
+    text-decoration: None;
+    transition: 0.3s;
+    position: relative;
+}
+
+a::before {
+    content: "";
+    background: var(--accent-gradient);
+    border-radius: 0.2em;
+    height: 0.7em;
+    display: inline-block;
+    z-index: -5;
+    position: absolute;
+    top: 70%;
+    left: -0.2em;
+    width: calc(100% + 0.4em);
+    height: 30%;
+    transition: 0.3s;
+}
+
+a:hover::before {
+    top: 60%;
+    height: 45%;
+}
+
+article {
+    background-color: var(--primary-colour);
+    padding: 1em;
+    border-radius: 1em;
+}
+
+article h2 {
+    padding: 0;
+    margin: 0;
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+article p {
+    padding: 0;
+    margin: 0;
+}
+
+footer {
+    font-size: 0.5em;
+    color: var(--accent-colour);
+    text-align: right;
+}
+
+li {
+    position: relative;
+    line-height: 2em;
+}
+
+li::marker {
+    content: "";
+}
+
+li::after {
+    content: "";
+    background: var(--secondary-gradient);
+    border-radius: 0.3em;
+    height: 0.7em;
+    display: inline-block;
+    z-index: -5;
+    position: absolute;
+    top: 0.5em;
+    left: -0.75em;
+    width: 1em;
+    height: 1em;
+    transition: 0.2s;
+    rotate: 18deg;
+}
+
+li:hover::after {
+    rotate: 45deg;
+}
+
+
+code {
+    border-radius: 0.4em;
+    font-size: 1em;
+    position: relative;
+    font-family: "SUSE Mono", sans-serif;
+}
+
+code::before {
+    content: "";
+    background: var(--secondary-gradient);
+    border-radius: 0.4em;
+    height: 1em;
+    display: inline-block;
+    z-index: -5;
+    position: absolute;
+    top: 0;
+    left: -0.2em;
+    width: calc(100% + 0.4em);
+    height: 100%;
+    rotate: 3deg;
+}
+
+pre:has(code) {
+    margin: 0;
+    padding: 1em;
+    border-radius: 1em;
+    background: var(--secondary-gradient);
+    width: max-content;
+    rotate: 2deg;
+}
+
+pre code {
+    background: none;
+    display: inline-block;
+    transition: 0.2s;
+    rotate: -2deg;
+}
+
+pre code::before {
+    content: none;
+}
+
+.highlight {
+    position: relative;
+}
+.highlight::before {
+    content: "";
+    /* background: var(--code-background-gradient); */
+    background: var(--primary-gradient);
+    border-radius: 0.4em;
+    height: 1em;
+    display: inline-block;
+    z-index: -5;
+    position: absolute;
+    top: 0;
+    left: -0.2em;
+    width: calc(100% + 0.4em);
+    height: 100%;
+    rotate: 3deg;
+}
