@@ -49,6 +49,7 @@ hr {
 
 header {
     width: min(90%, 50em);
+    text-align: center;
     margin: 0 auto;
 }
 
@@ -69,13 +70,15 @@ img {
     display: inline-block;
 }
 
-header {
+.page-title {
+    margin: 0;
+    padding: 0;
     display: grid;
     grid-template-columns: 50% 50%;
     height: min-content;
 }
 
-header nav {
+.page-title nav {
     text-align: right;
 }
 
