@@ -1,3 +1,7 @@
+/* css specific to simpsons.html */
+
+@import url("../base.css");
+
 #interesting-info {
     display: grid;
     grid-template-rows: auto auto auto;

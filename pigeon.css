@@ -1,3 +1,8 @@
+/* pigeon.css
+
+This is a standalone css theme and contains nothing specific to this website
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+US+Modern:wght@100..400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
@@ -23,68 +28,37 @@
     --accent-gradient: linear-gradient(90deg,rgba(235, 123, 192, 0.45) 0%, rgba(235, 123, 192, 0.6) 3%, rgba(235, 123, 192, 0.45) 6%, rgba(235, 123, 192, 0.35) 50%, rgba(235, 123, 192, 0.45) 94%, rgba(235, 123, 192, 0.6) 97%, rgba(235, 123, 192, 0.45) 100%);;
 
     --code-background-gradient: linear-gradient(90deg, rgba(192, 235, 123, 0.45) 0%, rgba(192, 235, 123, 0.6) 3%, rgba(192, 235, 123, 0.45) 6%, rgba(192, 235, 123, 0.35) 50%, rgba(192, 235, 123, 0.45) 94%, rgba(192, 235, 123, 0.6) 97%, rgba(192, 235, 123, 0.45) 100%);
+
+    --header-font: "Permanent Marker", cursive;
+    --header-font-weight: 400;
+    --header-font-style: normal;
+
+    --text-font: "Montserrat", sans-serif;
+    --text-font-weight: 400;
+    --text-font-style: normal;
+    --text-font-size: 1.2em;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Permanent Marker", cursive;
-    font-weight: 400;
-    font-style: normal;
+    font-family: var(--header-font);
+    font-weight: var(--header-font-weight);
+    font-style: var(--header-font-style);
 }
 
 body {
     background-color: var(--background);
     color: var(--text-colour);
-    font-size: 1.2em;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+    font-size: var(--text-font-size);
+    font-family: var(--text-font);
+    font-weight: var(--text-font-weight);
+    font-style: var(--text-font-style);
 }
 
-hr {
-    color: var(--accent-colour);
-    background-color: var(--accent-colour);
-    height: 2px;
-}
 
-header {
-    width: min(90%, 50em);
-    margin: 0 auto;
-    text-align:center;
-    margin: 0 auto;
-    padding:0px;
-}
-
-header img {
-    margin: 0 auto;
-    width: 100px;
-    text-align:center;
-    margin: 0 auto;
-    padding:0px;
-}
 
 main {
     width: min(90%, 50em);
     margin: 0 auto;
-}
-/* 
-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-} */
-
-
-.page-title {
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    height: min-content;
-}
-
-.page-title nav {
-    text-align: right;
 }
 
 a {
@@ -133,21 +107,11 @@ article p {
     margin: 0;
 }
 
-footer {
-    font-size: 0.5em;
-    color: var(--accent-colour);
-    text-align: right;
-}
-
 li {
     position: relative;
     line-height: 2em;
     list-style-type: none;
 }
-
-/* li::marker {
-    content: "";
-} */
 
 li::after {
     content: "";
@@ -168,7 +132,6 @@ li::after {
 li:hover::after {
     rotate: 45deg;
 }
-
 
 code {
     border-radius: 0.4em;
@@ -215,9 +178,9 @@ pre code::before {
 .highlight {
     position: relative;
 }
+
 .highlight::before {
     content: "";
-    /* background: var(--code-background-gradient); */
     background: var(--primary-gradient);
     border-radius: 0.4em;
     height: 1em;

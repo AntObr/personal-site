@@ -1,0 +1,38 @@
+/* This contains styles used across this
+website that are specific to this website */
+
+@import url("pigeon.css");
+
+header {
+    width: min(90%, 50em);
+    margin: 0 auto;
+    text-align:center;
+    margin: 0 auto;
+    padding:0px;
+}
+
+header img {
+    margin: 0 auto;
+    width: 100px;
+    text-align:center;
+    margin: 0 auto;
+    padding:0px;
+}
+
+.page-title {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: min-content;
+}
+
+.page-title nav {
+    text-align: right;
+}
+
+footer {
+    font-size: 0.5em;
+    color: var(--accent-colour);
+    text-align: right;
+}
